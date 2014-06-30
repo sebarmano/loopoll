@@ -39,9 +39,11 @@ Sign up (or log in if you already have an account) via http://0:0:0:0!
         Questions with two answers will display as a bar chart, else pie chart. (All questions must have two answers.)>
 
 ###Known bug(s):
-- Display page for each question shows the top answer incorrectly. 
+- Links to new questions don't work because there aren't any answers yet.
+Display page for each question shows the top answer incorrectly. 
 This was an extra feature we added, but one we'd like to see functioning.
 - Need to create more tests and move some logic out of the views and into custom methods.
+- Possibly make the Next Question button on question show go to a different location than All Questions button.
 
 ##Original Specs:
 

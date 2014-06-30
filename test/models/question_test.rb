@@ -80,7 +80,6 @@ class QuestionTest < ActiveSupport::TestCase
           user_id: user1.id,
           answer_id: 1
       )
-      
       assert Result.where(id: user1.id).size <= 1
       ## find_by methods return a single bare record, so the
       ## results don't have methods like .count and .size
