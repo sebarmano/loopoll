@@ -10,6 +10,7 @@
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
     <%= csrf_meta_tags %>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700|Courgette' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
@@ -34,7 +35,7 @@
         <ul class="right">
 
           <% if current_user %>
-              <li><%= link_to "Logged in as #{current_user.name}, id: #{current_user.id}", '#' %></li>
+              <li><%= link_to "Logged in as #{current_user.name}", '#' %></li>
               <li class="active"><%= link_to "Logout", logout_path, method: :delete %></li>
           <% else %>
               <li><%= link_to "Login", root_path %></li>
@@ -42,9 +43,10 @@
         </ul>
     </section>
   </nav>
+    <div class="wall">
 
-
-    <%= yield %>
-    <%= javascript_include_tag "application" %>
+      <%= yield %>
+      <%= javascript_include_tag "application" %>
+  </div>
   </body>
 </html>

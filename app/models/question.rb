@@ -11,12 +11,15 @@ class Question < ActiveRecord::Base
   accepts_nested_attributes_for :answers,
     reject_if: lambda { |answer| answer['content'].blank? }
 
+
+  # Validations
   def future_due_date #TODO: test for this validation
     if duedate < Date.today
       errors.add(:duedate, ", poll must end in the future.")
     end
   end
-
+    
+  # Methods
   def active
     duedate > Date.today
   end
