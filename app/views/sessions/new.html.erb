@@ -1,25 +1,27 @@
-<div class="login">
-  <div class="row dialog">
-    <div class=" panel large-4 columns right">
-      <h3>Log In</h3>
-      <p id="alert"><%= alert %></p>
-      <%= form_tag sessions_path do %>
-          <div class="field">
-            <%= label_tag :email %>
-            <%= email_field_tag :email, params[:email] %>
-          </div>
-          <div class=field>
-            <%= label_tag :password %>
-            <%= password_field_tag :password, params[:password] %>
-          </div>
-          <div class="actions"><%= submit_tag "Log In" %></div>
-          <div>Don't have a user yet? Please
-            <%= link_to "Sign Up", signup_path %>!
-          </div>
-      <% end %>
+<div class="row">
+
+  <div class="login">
+    <div class="row dialog">
+      <div class=" panel large-4 columns right">
+        <h3>Log In</h3>
+        <p id="alert"><%= alert %></p>
+        <%= form_tag sessions_path do %>
+            <div class="field">
+              <%= label_tag :email %>
+              <%= email_field_tag :email, params[:email] %>
+            </div>
+            <div class=field>
+              <%= label_tag :password %>
+              <%= password_field_tag :password, params[:password] %>
+            </div>
+            <div class="actions"><%= submit_tag "Log In" %></div>
+            <div>Don't have a user yet? Please
+              <%= link_to "Sign Up", signup_path %>!
+            </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
 
-
-<%= link_to 'Back', sessions_path %>
+</div>

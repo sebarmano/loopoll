@@ -19,3 +19,12 @@
 .card {
   text-align: center;
 }
+
+.fancy h1 {
+  font-family: font-family: 'Courgette', cursive;
+}
+
+.wall {
+  background: url("white_wall_hash.png") repeat;
+  height: 1100px;
+ }

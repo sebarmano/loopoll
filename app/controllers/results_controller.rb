@@ -28,7 +28,7 @@ class ResultsController < ApplicationController
     @result.user_id = current_user.id
     respond_to do |format|
       if @result.save
-        format.html { redirect_to @result.answer.question, notice: 'Result was successfully created.' }
+        format.html { redirect_to @result.answer.question, notice: 'Thank you for your vote!' }
         format.json { render @result.answer.question, status: :created, location: @result }
       else
         format.html { redirect_to @result.answer.question, notice: 'You already voted on this question.' }
