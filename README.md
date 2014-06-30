@@ -1,4 +1,4 @@
-Loopoll
+Loop-oll
 =======
 ###Intro
 
@@ -6,19 +6,19 @@ Have questions on which you'd like to poll others?
 
 Want to provide feedback by voting?
 
-Use feedback loops through Loopoll! 
+Use feedback loops through Loop-oll! 
 
 
 ###Voting
 Users must have an account to vote, 
   can only vote on questions (created by other users - not on their own!) until the due date,
-  and each user can only vote once(!) on any question - there are no loopholes with Loopoll!
+  and each user can only vote once(!) on any question - there are no loopholes with Loop-oll!
 
 ###Login
 
 Sign up (or log in if you already have an account) via http://0:0:0:0!
 
-- If you'd like to test Loopoll before creating an account, log in with email: test@test and pwd: test.
+- If you'd like to test Loop-oll before creating an account, log in with email: test@test and pwd: test.
 - Once logged in, your name will display in the top nav, next to the logout button.
 
 ###Features
