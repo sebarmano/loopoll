@@ -19,8 +19,10 @@
 
   <%= card(@question.results.count, 'ANSWERS RECEIVED', 'right') %>
   <%= card(@question.days_left, 'DAYS TO END', 'right') %>
+  <% if @question.results.any? %>
   <%= card(((@question.results.max {|m| m.answer_id}).answer_id), 'WINNING ANSWER', 'right') %>   <!-- FIXME:put the right answer -->
   <!--@answers.where(answer_id: (@question.results.count.max {|m| m.answer_id})-->
+  <% end %>
 
   </div>
 
