@@ -41,7 +41,7 @@ gem 'unicorn'
 gem 'stack_rescue', group: :development
 gem 'foundation-rails'
 gem 'simple_form'
-gem 'faker', group: [:development, :test]
+gem 'faker'
 gem 'pry-rails'
 gem 'better_errors'
 gem 'binding_of_caller'
