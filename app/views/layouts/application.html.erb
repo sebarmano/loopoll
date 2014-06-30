@@ -29,6 +29,7 @@
       <!-- Left Nav Section -->
       <ul class="left">
         <li class="active"><%= link_to "Loopoll", questions_path %></li>
+        <li><a href="#" data-reveal-id="myModal">Instructions</a></li>
       </ul>
 
       <!-- Right Nav Section -->
@@ -48,5 +49,100 @@
       <%= yield %>
       <%= javascript_include_tag "application" %>
   </div>
+
+
+<a href="#" data-reveal-id="myModal">Click Me For A Modal</a>
+<div id="myModal" class="reveal-modal" data-reveal>
+
+  <p class="lead">(Readme)</p>
+  <h1>Loopoll</h1>
+
+  <h3>Intro</h3>
+
+  <p>Have questions on which you'd like to poll others? </p>
+
+  <p>Want to provide feedback by voting?</p>
+
+  <p>Use feedback loops through Loopoll! </p>
+
+  <h3>Voting</h3>
+
+  <p>Users must have an account to vote,
+    can only vote on questions (created by other users - not on their own!) until the due date,
+    and each user can only vote once(!) on any question - there are no loopholes with Loopoll!</p>
+
+  <h3>Login</h3>
+
+  <p>Sign up (or log in if you already have an account) via http://peaceful-island-7006.herokuapp.com/!</p>
+
+  <ul>
+    <li>If you'd like to test Loopoll before creating an account, log in with email: test@test and pwd: test.</li>
+    <li>Once logged in, your name will display in the top nav, next to the logout button.</li>
+  </ul>
+
+  <h3>Features</h3>
+
+  <ul>
+    <li>Your dashboard includes:
+      <ul><li>The ability to create a yes/no question right there on the spot! Just type it in and click submit!</li>
+        <li>A link to create a multiple choice (2 - 5 choices only) question.</li>
+        <li>Summaries of:
+          <ul><li>Active questions you've created (incl. days left until the poll closes &amp; results thus far), </li>
+            <li>Questions you've already answered, and </li>
+            <li>Active questions created by other users that you haven't yet answered (incl. days left until the poll closes).
+              <strong> NOTE:</strong> An <em>active</em> question is one whose due date has not passed.></li></ul></li></ul></li>
+    <li>Click on the text of any question from the dashboard to:
+      <ul>
+        <li>See a larger view of the results, or</li>
+        <li>Vote (if you haven't yet and the question is still active). <strong>NOTE:</strong> After voting, the page will refresh with results up to and including your vote, and
+          you won`t be able to return to the voting page again.
+          Questions with two answers will display as a bar chart, else pie chart. (All questions must have two answers.)</li></ul></li>
+  </ul>
+<br><br>
+  <em>
+  <h4>Known bug(s):</h4>
+
+  <ul>
+    <li>Links to new questions don't work because there aren't any answers yet.
+      Display page for each question shows the top answer incorrectly.
+      This was an extra feature we added, but one we'd like to see functioning.</li>
+    <li>Need to create more tests and move some logic out of the views and into custom methods.</li>
+    <li>Possibly make the Next Question button on question show go to a different location than All Questions button.</li>
+  </ul>
+
+  <h4>Original Specs:</h4>
+
+  <p>Option 3: Voting Booth</p>
+
+  <ul>
+    <li>~~Make an application that lets users create yes or no questions and send a link to people to vote on them.~~</li>
+    <li><p>~~You don't need to add in emailing capabilities -- just give the user the link they need to send to friends.~~</p></li>
+    <li><p>~~You'll need users to create the questions, and probably want users in order to vote -- otherwise,
+      the same person could vote over and over. Maybe you could figure out a way to prevent that with the session.~~</p></li>
+    <li><p>~~Each question has its own URL and if you've voted, you see the results. If you haven't, you can vote.~~</p></li>
+  </ul>
+
+  <h6>Nice to have</h6>
+
+  <ul>
+    <li>~~Show a pie chart when you show results -- maybe Chartkick would help? http://chartkick.com/~~</li>
+    <li>~~Allow questions with multiple choice, not just yes or no~~</li>
+    <li>~~Have a page for each user where they can see all their questions~~</li>
+    <li>~~Put a time limit on questions. After the question's end date, no one can vote and everyone can see results.~~</li>
+    <li>Let people add comments on questions they've answered (or have run out of time to vote)</li>
+  </ul>
+
+  <h6>Things to learn</h6>
+
+  <ul>
+    <li>~~Creating users~~</li>
+    <li>~~Preventing multiple votes per user~~</li>
+    <li>~~How would you store a question that could have multiple answers?~~</li>
+  </ul>
+</em>
+
+  </p> <a class="close-reveal-modal">&#215;</a>
+</div>
+
   </body>
 </html>

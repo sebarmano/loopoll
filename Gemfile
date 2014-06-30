@@ -53,3 +53,5 @@ gem "chartkick"
 #heroku deployment
 gem 'rails_12factor', group: :production
 gem 'pg', group: :production
+
+gem 'kramdown'
