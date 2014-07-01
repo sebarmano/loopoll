@@ -1,0 +1,26 @@
+<div class="row">
+  <%= form_for(@question) do |f| %>
+    <% if @question.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@question.errors.count, "error") %> prohibited this question from being saved:</h2>
+
+        <ul>
+        <% @question.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="large-12 columns">
+      <fieldset>
+        <legend>Multichoice-Q creator
+        </legend>
+        <div color="white" class="button regular actions">
+          <%= link_to 'new multiple choice question', new_question_path%>
+        </div>
+
+      </fieldset>
+    </div>
+  <% end %>
+</div>
