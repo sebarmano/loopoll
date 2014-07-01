@@ -55,4 +55,13 @@ class Question < ActiveRecord::Base
   def result_data
     results.includes(:answer).group(:answer).count
   end
+  # def results_data
+  #   results.includes(:answer).group(:answer).count.max {|m| m.answer_id}).answer_id
+  # end
+
+  #includes(:posts).where('posts.name = ?', 'example').references(:posts)
+
+  # def results_max
+  #   result_data.max {|m| m.answer}).answer
+  # end
 end

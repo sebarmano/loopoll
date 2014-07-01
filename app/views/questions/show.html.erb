@@ -17,15 +17,17 @@
     </div>
 
 
-  <%= card(@question.results.count, 'ANSWERS RECEIVED', 'right') %>
-  <%= card(@question.days_left, 'DAYS TO END', 'right') %>
-  <% if @question.results.any? %>
-  <%= card(((@question.results.max {|m| m.answer_id}).answer_id), 'WINNING ANSWER', 'right') %>   <!-- FIXME:put the right answer -->
-  <!--@answers.where(answer_id: (@question.results.count.max {|m| m.answer_id})-->
-  <% end %>
-
+    <%= card(@question.results.count, 'ANSWERS RECEIVED', 'right') %>
+    <%= card(@question.days_left, 'DAYS TO END', 'right') %>
+    <%  if @question.results.any? %>
+    <%= card(((@question.results.max {|m| m.answer_id}).answer_id), 'MOST ANSWERED', 'right') %>  <!-- FIXME:put the right answer -->
+    <% end %>
+        <!--@question.results.answer_id, -->
+        <!--@question.results.joins(:answers).id.content-->
+        <!--@question.results.joins(:answers).where('answers.id = ?, :answer_id')) -->
+        <!--@question.results.includes(:answers).where('answers.content = ?', :answer_id).references(:answers), 'WINNING ANSWER', 'right') -->
+        <!--@answers.where(answer_id: (@question.results.count.max {|m| m.answer_id})-->
   </div>
-
 
 <% else %>
   <div class="row">

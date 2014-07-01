@@ -22,8 +22,9 @@
 
         <div class="field large-4 columns">
            <%= f.label :duedate %><br>
-           <%= f.date_select :duedate, default: Date.tomorrow  %>
+           <%= f.text_field :duedate, default: Date.tomorrow  %>
         </div>
+
 
         <%= f.fields_for :answers do |ff| %>
             <%= ff.hidden_field :content, value: "Yes" %>

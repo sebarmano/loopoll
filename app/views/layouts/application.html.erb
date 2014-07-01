@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "Loopoll" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Loop-oll" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -28,12 +28,12 @@
 
       <!-- Left Nav Section -->
       <ul class="left">
-        <li class="active"><%= link_to "Loopoll", questions_path %></li>
+        <li class="active"><%= link_to "Loop-oll", questions_path %></li>
       </ul>
 
       <!-- Right Nav Section -->
         <ul class="right">
-
+          <li><a href="#" data-reveal-id="myModal">Instructions</a></li>
           <% if current_user %>
               <li><%= link_to "Logged in as #{current_user.name}", '#' %></li>
               <li class="active"><%= link_to "Logout", logout_path, method: :delete %></li>
@@ -48,5 +48,66 @@
       <%= yield %>
       <%= javascript_include_tag "application" %>
   </div>
-  </body>
+</body>
+
+<div id="myModal" class="reveal-modal" data-reveal>
+
+  <p class="lead">(Readme)</p>
+  <h1>Loop-oll</h1>
+
+  <h3>Intro</h3>
+
+  <p>Have questions on which you'd like to poll others? </p>
+
+  <p>Want to provide feedback by voting?</p>
+
+  <p>Use feedback loops through Loop-oll! </p>
+
+  <h3>Voting</h3>
+
+  <p>Users must have an account to vote,
+    can only vote on questions (created by other users - not on their own!) until the due date,
+    and each user can only vote once(!) on any question - there are no loopholes with Loop-oll!</p>
+
+  <h3>Login</h3>
+
+  <p>Sign up (or log in if you already have an account) via http://peaceful-island-7006.herokuapp.com/!</p>
+
+  <ul>
+    <li>If you'd like to test Loop-oll before creating an account, log in with email: test@test and pwd: test.</li>
+    <li>Once logged in, your name will display in the top nav, next to the logout button.</li>
+  </ul>
+
+  <h3>Features</h3>
+
+  <ul>
+    <li>Your dashboard includes:
+      <ul><li>The ability to create a yes/no question right there on the spot! Just type it in and click submit!</li>
+        <li>A link to create a multiple choice (2 - 5 choices only) question.</li>
+        <li>Summaries of:
+          <ul><li>Active questions you've created (incl. days left until the poll closes &amp; results thus far), </li>
+            <li>Questions you've already answered, and </li>
+            <li>Active questions created by other users that you haven't yet answered (incl. days left until the poll closes).
+              <strong> NOTE:</strong> An <em>active</em> question is one whose due date has not passed.></li></ul></li></ul></li>
+    <li>Click on the text of any question from the dashboard to:
+      <ul>
+        <li>See a larger view of the results, or</li>
+        <li>Vote (if you haven't yet and the question is still active). <strong>NOTE:</strong> After voting, the page will refresh with results up to and including your vote, and
+          you won`t be able to return to the voting page again.
+          Questions with two answers will display as a bar chart, else pie chart. (All questions must have two answers.)</li></ul></li>
+  </ul>
+<br><br>
+  <em>
+  <h4>Known bug(s):</h4>
+
+  <ul>
+    <li>Display page for each question shows the top answer incorrectly.
+      This was an extra feature we added, but one we'd like to see functioning.</li>
+    <li>Need to create more tests and move some logic out of the views and into custom methods.</li>
+    <li>Next Question button (on Question show page) should go to the next unanswered question vs the dashboard, like the All Questions button.</li>
+  </ul>
+
+   <a class="close-reveal-modal">&#215;</a>
+</div>
+
 </html>

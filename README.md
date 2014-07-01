@@ -1,4 +1,4 @@
-Loopoll
+Loop-oll
 =======
 ###Intro
 
@@ -6,19 +6,19 @@ Have questions on which you'd like to poll others?
 
 Want to provide feedback by voting?
 
-Use feedback loops through Loopoll! 
+Use feedback loops through Loop-oll! 
 
 
 ###Voting
 Users must have an account to vote, 
   can only vote on questions (created by other users - not on their own!) until the due date,
-  and each user can only vote once(!) on any question - there are no loopholes with Loopoll!
+  and each user can only vote once(!) on any question - there are no loopholes with Loop-oll!
 
 ###Login
 
 Sign up (or log in if you already have an account) via http://0:0:0:0!
 
-- If you'd like to test Loopoll before creating an account, log in with email: test@test and pwd: test.
+- If you'd like to test Loop-oll before creating an account, log in with email: test@test and pwd: test.
 - Once logged in, your name will display in the top nav, next to the logout button.
 
 ###Features
@@ -39,11 +39,10 @@ Sign up (or log in if you already have an account) via http://0:0:0:0!
         Questions with two answers will display as a bar chart, else pie chart. (All questions must have two answers.)>
 
 ###Known bug(s):
-- Links to new questions don't work because there aren't any answers yet.
-Display page for each question shows the top answer incorrectly. 
+- Display page for each question shows the top answer incorrectly. 
 This was an extra feature we added, but one we'd like to see functioning.
 - Need to create more tests and move some logic out of the views and into custom methods.
-- Possibly make the Next Question button on question show go to a different location than All Questions button.
+- Next Question button on question show should go to the next unanswered question vs the dashboard, like the All Questions button.
 
 ##Original Specs:
 

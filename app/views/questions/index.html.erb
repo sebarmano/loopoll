@@ -1,13 +1,27 @@
 <div class="container">
+  <p id="notice"><%= notice %></p>
   <div class="row">
-    <p id="notice"><%= notice %></p>
-    <h1>Listing questions</h1>
+    <fieldset>
+        <h3>Create a question!</h3>
+          <div class="large-9 columns">
+            <%= render 'form_quickq' %>
+          </div>
+
+          <div class="large-3 columns">
+            <%= render 'form_multiq' %>
+          </div>
+      </fieldset>
+  </div>
+
+  <div class="row">
+    <fieldset>
+    <h3>Dashboard</h3><br>
     <div class="large-4 columns">
         <table>
           <thead>
             <tr>
-              <th>created question</th>
-              <th>answers received</th>
+              <th>Created question</th>
+              <th>Votes</th>
               <th></th>
             </tr>
           </thead>
@@ -25,11 +39,11 @@
       </div>
 
 
-      <div class="large-4 columns">
+      <div class="large-2 columns">
         <table>
           <thead>
             <tr>
-              <th>answered question</th>
+              <th>Answered question</th>
               <th>Your answer</th>
             </tr>
           </thead>
@@ -44,13 +58,13 @@
         </table>
       </div>
 
-      <div class="columns-4 large">
+      <div class="columns-8 large">
         <table>
           <thead>
             <tr>
-              <th>Questions to answer</th>
-              <th>Question creator</th>
-              <th>Days left to answer</th>
+              <th>Unanswered question</th>
+              <th>Created by</th>
+              <th>Days left</th>
             </tr>
           </thead>
 
@@ -67,10 +81,6 @@
         </table>
       </div>
 
-      <%= render 'form' %>
-      <h4>
-      Need more options? Then you can try with a:
-      <%= link_to 'new multiple choice question', new_question_path, class: "button secondary columns-2 large" %>
-    </h4>
+      </fieldset>
   </div>
 </div>
