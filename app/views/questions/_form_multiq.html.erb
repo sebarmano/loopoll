@@ -16,10 +16,8 @@
       <fieldset>
         <legend>Multichoice-Q creator
         </legend>
-        <div color="white" class="button regular actions">
-          <%= link_to 'new multiple choice question', new_question_path%>
-        </div>
-
+        <%= link_to "New Q", new_question_path, class: "button", remote: true  %>
+        <div id="new-multiq-modal" class="reveal-modal" data-reveal></div>
       </fieldset>
     </div>
   <% end %>
