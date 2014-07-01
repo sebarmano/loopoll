@@ -29,12 +29,11 @@
       <!-- Left Nav Section -->
       <ul class="left">
         <li class="active"><%= link_to "Loop-oll", questions_path %></li>
-        <li><a href="#" data-reveal-id="myModal">Instructions</a></li>
       </ul>
 
       <!-- Right Nav Section -->
         <ul class="right">
-
+          <li><a href="#" data-reveal-id="myModal">Instructions</a></li>
           <% if current_user %>
               <li><%= link_to "Logged in as #{current_user.name}", '#' %></li>
               <li class="active"><%= link_to "Logout", logout_path, method: :delete %></li>
@@ -106,39 +105,8 @@
     <li>Display page for each question shows the top answer incorrectly.
       This was an extra feature we added, but one we'd like to see functioning.</li>
     <li>Need to create more tests and move some logic out of the views and into custom methods.</li>
-    <li>Next Question button on question show should go to the next unanswered question vs the dashboard, like the All Questions button.</li>
+    <li>Next Question button (on Question show page) should go to the next unanswered question vs the dashboard, like the All Questions button.</li>
   </ul>
-
-  <h4>Original Specs:</h4>
-
-  <p>Option 3: Voting Booth</p>
-
-  <ul>
-    <li>~~Make an application that lets users create yes or no questions and send a link to people to vote on them.~~</li>
-    <li><p>~~You don't need to add in emailing capabilities -- just give the user the link they need to send to friends.~~</p></li>
-    <li><p>~~You'll need users to create the questions, and probably want users in order to vote -- otherwise,
-      the same person could vote over and over. Maybe you could figure out a way to prevent that with the session.~~</p></li>
-    <li><p>~~Each question has its own URL and if you've voted, you see the results. If you haven't, you can vote.~~</p></li>
-  </ul>
-
-  <h6>Nice to have</h6>
-
-  <ul>
-    <li>~~Show a pie chart when you show results -- maybe Chartkick would help? http://chartkick.com/~~</li>
-    <li>~~Allow questions with multiple choice, not just yes or no~~</li>
-    <li>~~Have a page for each user where they can see all their questions~~</li>
-    <li>~~Put a time limit on questions. After the question's end date, no one can vote and everyone can see results.~~</li>
-    <li>Let people add comments on questions they've answered (or have run out of time to vote)</li>
-  </ul>
-
-  <h6>Things to learn</h6>
-
-  <ul>
-    <li>~~Creating users~~</li>
-    <li>~~Preventing multiple votes per user~~</li>
-    <li>~~How would you store a question that could have multiple answers?~~</li>
-  </ul>
-</em>
 
   </p> <a class="close-reveal-modal">&#215;</a>
 </div>
