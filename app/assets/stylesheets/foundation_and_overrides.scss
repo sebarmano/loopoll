@@ -12,6 +12,9 @@
 // Allows the use of rem-calc() or lower-bound() in your settings
 @import "foundation/functions";
 
+@import "foundation";
+@export "foundation-datetimepicker";
+
 // $experimental: true;
 
 // The default font-size is set to 100% of the browser style sheet (usually 16px)

@@ -11,11 +11,11 @@
 // about supported directives.
 //
 //= require jquery
+
 //= require jquery_ujs
 //= require foundation
 //= require turbolinks
+//= require pikaday
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
-
-<script src="http://a.unbounce.com/s/javascripts/jquery/jquery-ui.1.8.16.min.js"></script>
+var picker = new Pikaday({ field: $( '#question_duedate')[0]});
