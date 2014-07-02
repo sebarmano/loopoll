@@ -1,5 +1,5 @@
-<div class="row">
-  <%= form_for(@question) do |f| %>
+
+  <%= form_for(@question, namespace: "multiq") do |f| %>
     <% if @question.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@question.errors.count, "error") %> prohibited this question from being saved:</h2>
@@ -16,8 +16,9 @@
       <fieldset>
         <legend>Multichoice-Q creator</legend>
         <%= link_to "New Q", new_question_path, class: "button", remote: true  %>
-        <div id="new-multiq-modal" class="reveal-modal" data-reveal></div>
+
       </fieldset>
     </div>
   <% end %>
-</div>
+
+  <div id="new-multiq-modal" class="reveal-modal" data-reveal></div>
