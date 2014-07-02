@@ -18,4 +18,5 @@
 //= require pikaday
 //= require_tree .
 
-var picker = new Pikaday({ field: $( '#question_duedate')[0]});
+var picker = new Pikaday({ field: $( '#quickq_question_duedate')[0]});
+var picker = new Pikaday({ field: $( '#form2_question_duedate')[0]});
