@@ -39,7 +39,7 @@ class QuestionsController < ApplicationController
     respond_to do |format|
       if @question.save
         format.html { redirect_to questions_path, notice: 'Question was successfully created.' }
-        format.js 
+        format.js
       else
         format.js  { render :new }
         format.html { render :new }
