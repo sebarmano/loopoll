@@ -28,12 +28,13 @@
 
           <tbody>
             <% current_user.questions.each do |question| %>
-              <tr>
+              <tr id="<%= dom_id question %>">
                 <td><%= link_to question.content, question %></td>
                 <td><%= question.results.count %></td>
                 <td><%= link_to question,
                             method: :delete,
-                            data: { confirm: 'Are you sure you want to delete this question and its answers?' } do %>
+                            data: { confirm: 'Are you sure you want to delete this question and its answers?' },
+                            remote:true do %>
                      <i class='fa fa-times-circle'></i>
                      <% end %></td>
               </tr>
