@@ -49,8 +49,8 @@
           <% answers = @question.answers %>
           <%= f.collection_radio_buttons :answer_id, answers, :id, :content %>
         </div>
-        <div class="button sucesss">
-          <%= f.submit "Vote!" %>
+        <div>
+          <%= f.submit "Vote!", class:"button success" %>
         </div>
       <% end %>
       </div>
