@@ -3,3 +3,26 @@ $("#new-multiq-modal").
   foundation("reveal", "close");
 
 
+
+$('#created-quest').
+  append('\
+    <tr id = question_ + <%= @question.id %> >\
+       <td>\
+            <%= @question.content %>\
+       </td>\
+       \
+       <td>\
+            <%= @question.results.count %>\
+       </td>\
+       \
+       <td>\
+            <%= link_to @question,
+                  method: :delete,
+                  data: { confirm: "Are you sure you want to delete this question and its answers?" },
+                  remote:true do %>\
+                       <i class="fa fa-times-circle"></i>\
+                  <% end %>\
+       </td>\
+    </tr>\
+  ');
+
