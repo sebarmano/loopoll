@@ -19,7 +19,7 @@
 
     <div class="field large-4 columns">
        <%= f.label :duedate %><br>
-       <%= f.date_select :duedate, default: Date.tomorrow  %>
+       <%= f.text_field :duedate, default: Date.tomorrow  %>
     </div>
 
     <% 5.times do |i| %>

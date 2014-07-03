@@ -15,8 +15,9 @@
  *= require foundation_and_overrides
  *= require pikaday
  *= require font-awesome
-
+ *= require iCheck/skins/line/line  
  */
+
 
 
 .card {
@@ -27,10 +28,10 @@
   font-family: 'Courgette', cursive;
 }
 
-.wall {
+/* .wall {
   background: url("white_wall_hash.png") repeat;
   height: 1100px;
- }
+ } */
 
 .button a {
   color: white;

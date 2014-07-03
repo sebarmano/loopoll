@@ -60,4 +60,6 @@ gem 'pg', group: :production
 gem 'kramdown'
 
 
+
 gem 'rails-assets-pikaday'
+gem 'rails-assets-iCheck'
