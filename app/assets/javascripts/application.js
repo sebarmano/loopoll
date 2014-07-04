@@ -13,6 +13,7 @@
 //= require jquery
 
 //= require jquery_ujs
+//= require jquery-ui/effect-blind
 //= require foundation
 //= require turbolinks
 //= require pikaday
