@@ -21,17 +21,17 @@
 
 var picker = new Pikaday({ field: $( '#quickq_question_duedate')[0]});
 
-$(document).ready(function(){
-  $('input').each(function(){
-    var self = $(this),
-      label = self.next(),
-      label_text = label.text();
-
-    label.remove();
-    self.iCheck({
-      checkboxClass: 'icheckbox_line',
-      radioClass: 'iradio_line',
-      insert: '<div class="icheck_line-icon"></div>' + label_text
-    });
-  });
-});
+// $(document).ready(function(){
+//   $('input').each(function(){
+//     var self = $(this),
+//       label = self.next(),
+//       label_text = label.text();
+//
+//     label.remove();
+//     self.iCheck({
+//       checkboxClass: 'icheckbox_line',
+//       radioClass: 'iradio_line',
+//       insert: '<div class="icheck_line-icon"></div>' + label_text
+//     });
+//   });
+// });
