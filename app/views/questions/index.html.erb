@@ -1,8 +1,10 @@
 <div class="container">
   <p id="notice"><%= notice %></p>
   <div class="row">
-    <fieldset>
-        <h3>Create a question!</h3>
+    <div class="button success round" id="button-show" data-step="5" data-intro="Want to create a question? Glad you asked! Click on this button to open the Question creator!">Create a question!</div>
+    <i class="fa fa-question-circle right help" id="index-help"></i>
+
+    <fieldset class="hidden" id="qcreator">
           <div class="large-9 columns">
             <%= render 'form_quickq' %>
           </div>
@@ -15,9 +17,9 @@
 
   <div class="row">
     <fieldset>
-    <h3>Dashboard</h3><br>
+    <h3 class="special" data-step="1" data-intro="Here is your dashboard. You can acess every question from here">Dashboard</h3><br>
     <div class="large-4 columns">
-        <table id="created-quest">
+        <table id="created-quest" data-step="2" data-intro="These are questions you created. You can't answer you own questions but you can see results for them">
           <thead>
             <tr>
               <th>Created question</th>
@@ -27,7 +29,7 @@
           </thead>
 
           <tbody>
-            <% current_user.questions.each do |question| %>
+            <% @user_questions.each do |question| %>
               <tr id="<%= dom_id question %>">
                 <td><%= link_to question.content, question %></td>
                 <td><%= question.results.count %></td>
@@ -45,7 +47,7 @@
 
 
       <div class="large-2 columns">
-        <table>
+        <table data-step="3" data-intro="Your answered questions, you can see your answer right here and check the results clicking on each question">
           <thead>
             <tr>
               <th>Answered question</th>
@@ -64,7 +66,7 @@
       </div>
 
       <div class="columns-8 large">
-        <table>
+        <table data-step="4" data-intro="These are questions you can answer! These questions have been created by your friends.">
           <thead>
             <tr>
               <th>Unanswered question</th>

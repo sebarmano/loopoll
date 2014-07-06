@@ -15,23 +15,64 @@
  *= require foundation_and_overrides
  *= require pikaday
  *= require font-awesome
- *= require iCheck/skins/line/line  
+ *= require iCheck/skins/line/line
+ *= require intro.js/introjs
  */
 
+.landing-wall {
+  background: url("fabric_plaid.png") repeat;
+  height: 1000px;
+}
 
 
 .card {
   text-align: center;
 }
 
-.fancy h1 {
+.fancy {
   font-family: 'Courgette', cursive;
 }
 
-/* .wall {
+h1.fancy {
+  font-size: 72px;
+}
+
+h2.fancy {
+  font-size: 60px;
+}
+
+.special {
+  font-family: 'Lato', sans-serif;
+}
+
+.top-bar-section ul li > a {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+}
+
+li.active.fancy a {
+  font-family: 'Courgette', cursive;
+  font-size: 24px;
+}
+
+.hidden {
+  display:none;
+}
+
+.help {
+  font-size: 36px;
+  color: #008cba;
+}
+
+.help:hover {
+  color:black;
+}
+
+/*
+.wall {
   background: url("white_wall_hash.png") repeat;
   height: 1100px;
- } */
+ }*/
 
 .button a {
   color: white;
