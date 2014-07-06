@@ -103,6 +103,7 @@ GEM
       sprockets-rails (~> 2.0)
     rails-assets-iCheck (1.0.2)
       rails-assets-jquery (>= 1.7)
+    rails-assets-intro.js (0.9.0)
     rails-assets-jquery (2.1.1)
     rails-assets-pikaday (1.2.0)
     rails_12factor (0.0.2)
@@ -185,6 +186,7 @@ DEPENDENCIES
   quiet_assets (~> 1.0.3)
   rails (= 4.1.1)
   rails-assets-iCheck
+  rails-assets-intro.js
   rails-assets-pikaday
   rails_12factor
   sass-rails (~> 4.0.3)

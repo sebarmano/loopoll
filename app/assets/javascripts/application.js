@@ -18,6 +18,7 @@
 //= require turbolinks
 //= require pikaday
 //= require iCheck
+//= require intro.js
 //= require_tree .
 
 var picker = new Pikaday({ field: $( '#quickq_question_duedate')[0]});
@@ -40,3 +41,5 @@ var picker = new Pikaday({ field: $( '#quickq_question_duedate')[0]});
 $("#button-show").click( function() {
     $('#qcreator').toggle(500);
   })
+
+introJs().start();

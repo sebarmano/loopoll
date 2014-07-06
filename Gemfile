@@ -64,3 +64,4 @@ gem 'kramdown'
 
 gem 'rails-assets-pikaday'
 gem 'rails-assets-iCheck'
+gem 'rails-assets-intro.js'
