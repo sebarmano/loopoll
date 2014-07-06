@@ -1,8 +1,9 @@
 <div class="container">
   <p id="notice"><%= notice %></p>
   <div class="row">
-    <fieldset>
-        <h3 class='special'>Create a question!</h3>
+    <div class="button success" id="button-show">Create a question!</div>
+
+    <fieldset class="hidden" id="creator">
           <div class="large-9 columns">
             <%= render 'form_quickq' %>
           </div>
