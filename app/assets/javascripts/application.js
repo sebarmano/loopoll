@@ -38,5 +38,5 @@ var picker = new Pikaday({ field: $( '#quickq_question_duedate')[0]});
 // });
 
 $("#button-show").click( function() {
-    $('#creator').toggle(500);
+    $('#qcreator').toggle(500);
   })
