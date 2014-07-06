@@ -42,4 +42,10 @@ $("#button-show").click( function() {
     $('#qcreator').toggle(500);
   })
 
-introJs().start();
+$("#index-help").click( function(){
+  introJs().start();
+})
+
+$("#qcreator-help").click( function(){
+  introJs(".qcreator").start();
+})

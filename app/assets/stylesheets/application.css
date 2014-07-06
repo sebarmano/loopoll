@@ -19,6 +19,10 @@
  *= require intro.js/introjs
  */
 
+.landing-wall {
+  background: url("fabric_plaid.png") repeat;
+  height: 1000px;
+}
 
 
 .card {
@@ -53,6 +57,15 @@ li.active.fancy a {
 
 .hidden {
   display:none;
+}
+
+.help {
+  font-size: 36px;
+  color: #008cba;
+}
+
+.help:hover {
+  color:black;
 }
 
 /*

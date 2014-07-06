@@ -7,6 +7,7 @@ class QuestionsController < ApplicationController
     @questions = Question.order(:duedate)
     @question = Question.new
     @question.answers.build
+    @user_questions = current_user.questions.order(created_at: :desc)
   end
 
   # GET /questions/1

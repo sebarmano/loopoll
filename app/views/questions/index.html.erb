@@ -1,7 +1,8 @@
 <div class="container">
   <p id="notice"><%= notice %></p>
   <div class="row">
-    <div class="button success round" id="button-show" data-step="5" data-intro="How do I create a question? Glad you asked! Click on this button to open the Question creator!">Create a question!</div>
+    <div class="button success round" id="button-show" data-step="5" data-intro="Want to create a question? Glad you asked! Click on this button to open the Question creator!">Create a question!</div>
+    <i class="fa fa-question-circle right help" id="index-help"></i>
 
     <fieldset class="hidden" id="qcreator">
           <div class="large-9 columns">
@@ -28,7 +29,7 @@
           </thead>
 
           <tbody>
-            <% current_user.questions.each do |question| %>
+            <% @user_questions.each do |question| %>
               <tr id="<%= dom_id question %>">
                 <td><%= link_to question.content, question %></td>
                 <td><%= question.results.count %></td>

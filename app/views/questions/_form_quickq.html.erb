@@ -1,5 +1,5 @@
-<div class="row" data-step="6" data-intro="If you need to create a quick yes/no question, Quick-Q creator is the answer! Just enter your question, select a due date, and done!">
-  <%= form_for(@question, namespace: "quickq") do |f| %>
+<div class="row qcreator" data-step="1" data-intro="If you need to create a quick yes/no question, Quick-Q creator is the answer! Just enter your question, select a due date, and done!">
+  <%= form_for(@question, namespace: "quickq", remote:true ) do |f| %>
     <% if @question.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@question.errors.count, "error") %> prohibited this question from being saved:</h2>
@@ -35,8 +35,8 @@
         <% end %>
 
 
-          <div>
-            <%= f.submit "Create question", class: "button small regular round"%>
+          <div data-remote="true">
+            <%= f.submit "Create question", class: "button small regular round" %>
           </div>
 
       </fieldset>
