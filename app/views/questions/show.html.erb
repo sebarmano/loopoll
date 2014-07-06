@@ -1,8 +1,8 @@
 
 <div class="row">
 <p id="notice"><%= notice %></p>
-  <div class="large-6 columns large-centered">
-    <h2><%= @question.content %></h2>
+  <div class="large-8 columns large-centered">
+    <h2 class="fancy"><%= @question.content %></h2>
   </div>
 </div>
 <% if @question.answered?(current_user) || @question.user == current_user || @question.duedate < Date.today   %>
