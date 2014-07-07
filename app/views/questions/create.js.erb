@@ -3,6 +3,7 @@ $("#new-multiq-modal").
   foundation("reveal", "close");
 
 $("#quickq_question_content").val("")
+$('#qcreator').hide(500)
 
 $('#created-quest').
   prepend('\
@@ -26,4 +27,4 @@ $('#created-quest').
     </tr>\
   ');
 
-$('#created-quest tr:first').css({'background-color':'orange'}).animate({'background-color':'white'}, 2000);
+$('#created-quest tr:first').css({'background-color':'orange'}).animate({'background-color':'white'}, 2500);

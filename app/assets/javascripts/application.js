@@ -19,6 +19,7 @@
 //= require pikaday
 //= require iCheck
 //= require intro.js
+//= require datatables/jquery.dataTables
 //= require_tree .
 
 var picker = new Pikaday({ field: $( '#quickq_question_duedate')[0]});

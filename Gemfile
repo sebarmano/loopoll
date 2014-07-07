@@ -54,13 +54,12 @@ gem 'quiet_assets', '~> 1.0.3'
 gem 'font-awesome-rails'
 gem "chartkick"
 
-#heroku deployment
+# heroku deployment
 gem 'rails_12factor', group: :production
 gem 'pg', group: :production
 
 gem 'kramdown'
-
-
+gem 'jquery-datatables-rails'
 
 gem 'rails-assets-pikaday'
 gem 'rails-assets-iCheck'
