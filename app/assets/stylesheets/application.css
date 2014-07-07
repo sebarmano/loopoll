@@ -16,7 +16,7 @@
  *= require font-awesome
  *= require iCheck/skins/line/line
  *= require intro.js/introjs
- *= require datatables/jquery.dataTables
+ *= require dataTables/jquery.dataTables
  *= require_tree .
  */
 
