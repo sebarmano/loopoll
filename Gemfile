@@ -5,7 +5,6 @@ ruby "2.1.2"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use sqlite3 as the database for Active Record
-
 gem 'sqlite3', group: [:development, :test]
 
 # Use SCSS for stylesheets
@@ -61,6 +60,11 @@ gem 'pg', group: :production
 gem 'kramdown'
 gem 'jquery-datatables-rails'
 
+# datepicker
 gem 'rails-assets-pikaday'
+
+# Change aspect of checkboxes and radio buttons
 gem 'rails-assets-iCheck'
+
+# Walktrhough for new users
 gem 'rails-assets-intro.js'
