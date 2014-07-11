@@ -5,8 +5,7 @@ ruby "2.1.2"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use sqlite3 as the database for Active Record
-
-gem 'sqlite3', group: [:development, :test]
+# gem 'sqlite3', group: [:development, :test]
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -41,6 +40,12 @@ gem 'unicorn'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'sqlite3', :group => [:development, :test]
+group :production do
+  gem 'thin'
+  gem 'pg'
+end
+
 gem 'stack_rescue', group: :development
 gem 'foundation-rails'
 gem 'simple_form'
@@ -55,11 +60,8 @@ gem "chartkick"
 
 #heroku deployment
 gem 'rails_12factor', group: :production
-gem 'pg', group: :production
 
 gem 'kramdown'
-
-
 
 gem 'rails-assets-pikaday'
 gem 'rails-assets-iCheck'
