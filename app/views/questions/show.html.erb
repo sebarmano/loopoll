@@ -17,7 +17,7 @@
 
 
     <%= card(@question.results.count, 'ANSWERS RECEIVED', 'right') %>
-    <%= card(@question.days_left, 'DAYS TO END', 'right') %>
+    <%= card(@question.days_left >0 ? @question.days_left : 0, 'DAYS TO END', 'right') %>
     <%  if @question.results.any? %>
     <%= card( @question.most_answered.content, 'MOST ANSWERED', 'right') %>
     <% end %>
