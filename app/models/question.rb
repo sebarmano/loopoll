@@ -18,7 +18,7 @@ class Question < ActiveRecord::Base
       errors.add(:duedate, ", poll must end in the future.")
     end
   end
-    
+
   # Methods
   def active
     duedate > Date.today
@@ -55,6 +55,12 @@ class Question < ActiveRecord::Base
   def result_data
     results.includes(:answer).group(:answer).count
   end
+
+  def most_answered
+    most_answered = result_data.max_by { |_q, a| a }
+    most_answered[0]
+  end
+
   # def results_data
   #   results.includes(:answer).group(:answer).count.max {|m| m.answer_id}).answer_id
   # end

@@ -1,8 +1,7 @@
-
 <div class="row">
 <p id="notice"><%= notice %></p>
-  <div class="large-6 columns large-centered">
-    <h2><%= @question.content %></h2>
+  <div class="large-10 columns large-centered">
+    <h2 class="fancy"><%= @question.content %></h2>
   </div>
 </div>
 <% if @question.answered?(current_user) || @question.user == current_user || @question.duedate < Date.today   %>
@@ -18,15 +17,11 @@
 
 
     <%= card(@question.results.count, 'ANSWERS RECEIVED', 'right') %>
-    <%= card(@question.days_left, 'DAYS TO END', 'right') %>
+    <%= card(@question.days_left >0 ? @question.days_left : 0, 'DAYS TO END', 'right') %>
     <%  if @question.results.any? %>
-    <%= card(((@question.results.max {|m| m.answer_id}).answer_id), 'MOST ANSWERED', 'right') %>  <!-- FIXME:put the right answer -->
+    <%= card( @question.most_answered.content, 'MOST ANSWERED', 'right') %>
     <% end %>
-        <!--@question.results.answer_id, -->
-        <!--@question.results.joins(:answers).id.content-->
-        <!--@question.results.joins(:answers).where('answers.id = ?, :answer_id')) -->
-        <!--@question.results.includes(:answers).where('answers.content = ?', :answer_id).references(:answers), 'WINNING ANSWER', 'right') -->
-        <!--@answers.where(answer_id: (@question.results.count.max {|m| m.answer_id})-->
+
   </div>
 
 <% else %>

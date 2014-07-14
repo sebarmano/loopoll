@@ -15,10 +15,11 @@
     <div class="large-12 columns">
       <fieldset>
         <legend>Multichoice-Q creator</legend>
-        <%= link_to "New Q", new_question_path, class: "button", remote: true  %>
+        <%= link_to "New Q", new_question_path, class: "button round", remote: true  %>
 
       </fieldset>
     </div>
   <% end %>
 
   <div id="new-multiq-modal" class="reveal-modal" data-reveal></div>
+  <i class="fa fa-question-circle help" id="qcreator-help"></i>

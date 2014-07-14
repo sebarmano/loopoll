@@ -19,7 +19,7 @@
 
     <div class="field large-4 columns">
        <%= f.label :duedate %><br>
-       <%= f.text_field :duedate, default: Date.tomorrow  %>
+       <%= f.text_field :duedate, value: Date.today + 2.days  %>
     </div>
 
     <% 5.times do |i| %>
@@ -32,8 +32,8 @@
     <% end %>
 
     <div class="large-12 columns">
-      <div class="button regular actions">
-        <%= f.submit "Create Multiple Choice Question" %>
+      <div>
+        <%= f.submit "Create Multiple Choice Question", class: "button regular round" %>
       </div>
     </div>
   <% end %>

@@ -11,12 +11,14 @@
 // about supported directives.
 //
 //= require jquery
-
 //= require jquery_ujs
+//= require jquery-ui/effect-blind
 //= require foundation
 //= require turbolinks
 //= require pikaday
-
+//= require iCheck
+//= require intro.js
+//= require dataTables/jquery.dataTables
 //= require_tree .
 
 var picker = new Pikaday({ field: $( '#quickq_question_duedate')[0]});
@@ -35,3 +37,15 @@ var picker = new Pikaday({ field: $( '#quickq_question_duedate')[0]});
 //    });
 //  });
 //});
+
+$("#button-show").click( function() {
+    $('#qcreator').toggle(500);
+  })
+
+$("#index-help").click( function(){
+  introJs().start();
+})
+
+$("#qcreator-help").click( function(){
+  introJs(".qcreator").start();
+})

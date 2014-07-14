@@ -2,11 +2,12 @@ $("#new-multiq-modal").
   html("").
   foundation("reveal", "close");
 
-
+$("#quickq_question_content").val("")
+$('#qcreator').hide(500)
 
 $('#created-quest').
-  append('\
-    <tr id = question_ + <%= @question.id %> >\
+  prepend('\
+    <tr id = question_<%= @question.id %> >\
        <td>\
             <%= @question.content %>\
        </td>\
@@ -26,3 +27,4 @@ $('#created-quest').
     </tr>\
   ');
 
+$('#created-quest tr:first').css({'background-color':'orange'}).animate({'background-color':'white'}, 2500);

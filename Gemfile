@@ -5,7 +5,11 @@ ruby "2.1.2"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use sqlite3 as the database for Active Record
+<<<<<<< HEAD
 # gem 'sqlite3', group: [:development, :test]
+=======
+gem 'sqlite3', group: [:development, :test]
+>>>>>>> 70d40912b4bfb9562dc5bc93e0323bee7c6f525a
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -18,6 +22,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -58,10 +63,17 @@ gem 'quiet_assets', '~> 1.0.3'
 gem 'font-awesome-rails'
 gem "chartkick"
 
-#heroku deployment
+# heroku deployment
 gem 'rails_12factor', group: :production
 
 gem 'kramdown'
+gem 'jquery-datatables-rails'
 
+# datepicker
 gem 'rails-assets-pikaday'
+
+# Change aspect of checkboxes and radio buttons
 gem 'rails-assets-iCheck'
+
+# Walktrhough for new users
+gem 'rails-assets-intro.js'
