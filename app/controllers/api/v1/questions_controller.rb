@@ -26,7 +26,7 @@ class API::V1::QuestionsController < ApplicationController
 
   def show
   end
-
+  
   def destroy
   end
 
