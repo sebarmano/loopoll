@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  resources :results
-  resources :questions do
-    resources :answers
-
+  namespace :api, :defaults => {:format => :json} do
+    namespace :v1 do
+      resources :questions, except: [:new, :edit]
+    end
   end
 
-
+  resources :questions
   resources :users
 
   root 'sessions#new'
