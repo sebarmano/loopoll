@@ -43,6 +43,11 @@
     </section>
   </nav>
     <div class="wall">
+      <div class="row">
+          <p class="notice"><%= notice if notice %></p>
+          <p class="alert"><%= alert if alert %></p>
+      </div>
+
 
       <%= yield %>
       <%= javascript_include_tag "application" %>

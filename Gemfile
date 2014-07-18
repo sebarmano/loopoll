@@ -72,3 +72,8 @@ gem 'rails-assets-iCheck'
 
 # Walktrhough for new users
 gem 'rails-assets-intro.js'
+
+gem 'devise'
+gem 'oauth2'
+gem 'omniauth'
+gem 'httparty'
