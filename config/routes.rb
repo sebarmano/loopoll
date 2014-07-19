@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
   resources :results
   resources :questions do
     resources :answers
@@ -9,19 +9,19 @@ Rails.application.routes.draw do
   # match '/auth/failure', :to => 'sessions#failure', via: [:get, :post]
 
   
-  get '/auth/:provider/callback', to: 'devise/sessions#create'
+  # get '/auth/:provider/callback', to: 'devise/sessions#create'
 
 
 
 
-  resources :users
+  # resources :users
 
   root 'sessions#new'
 
-  get 'signup', to: 'users#new', as: 'signup'
-  get 'login', to: 'sessions#new', as: 'login'
-  delete 'logout', to: 'sessions#destroy', as: 'logout'
-  post 'sessions', to: 'sessions#create', as: 'sessions'
+  # get 'signup', to: 'users#new', as: 'signup'
+  # get 'login', to: 'sessions#new', as: 'login'
+  # delete 'logout', to: 'sessions#destroy', as: 'logout'
+  # post 'sessions', to: 'sessions#create', as: 'sessions'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

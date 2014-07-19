@@ -42,7 +42,7 @@ gem 'unicorn'
 
 gem 'sqlite3', :group => [:development, :test]
 group :production do
-  gem 'thin'
+#gem 'thin'
   gem 'pg'
 end
 
@@ -76,4 +76,5 @@ gem 'rails-assets-intro.js'
 gem 'devise'
 gem 'oauth2'
 gem 'omniauth'
+gem 'omniauth-twitter'
 gem 'httparty'
