@@ -75,6 +75,6 @@ gem 'rails-assets-intro.js'
 
 gem 'devise'
 gem 'oauth2'
-gem 'omniauth'
+# gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'httparty'

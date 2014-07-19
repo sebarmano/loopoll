@@ -222,7 +222,6 @@ DEPENDENCIES
   jquery-ui-rails
   kramdown
   oauth2
-  omniauth
   omniauth-twitter
   pg
   pry-rails
