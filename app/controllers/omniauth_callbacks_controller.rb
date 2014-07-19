@@ -3,10 +3,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     user = User.from_omniauth(request.env["omniauth.auth"])
     if user.persisted?
       flash.notice = "Signed in with twitter!"
-      sign_in_and_redirect questions_path
+      binding.pry
+      sign_in_and_redirect user
     else
       session["devise.user_attributes"] = user.attributes
-    # binding.pry
       redirect_to new_user_registration_path
     end
   end
