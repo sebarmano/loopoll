@@ -6,6 +6,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       sign_in_and_redirect questions_path
     else
       session["devise.user_attributes"] = user.attributes
+    # binding.pry
       redirect_to new_user_registration_path
     end
   end
