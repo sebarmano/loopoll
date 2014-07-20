@@ -70,4 +70,31 @@ class Question < ActiveRecord::Base
   # def results_max
   #   result_data.max {|m| m.answer}).answer
   # end
+
+
+  def tweet_question(token, question, answers)
+    twitter_access_token = twitter_token(token)
+    status = question.content
+
+    #set the tweet status to the question content and answers, add a loopoll hash
+    #post tweet
+  end
+
+  def twitter_token(twitter_access_token)
+    return @twitter_token if @twitter_token
+    twitter_client = OAuth2::Client.new(Rails.application.secrets.twitter_key,
+                                        Rails.application.secrets.twitter_secret,
+                                        :site => "https://api.twitter.com/1.1/")
+           @twitter_token = OAuth2::AccessToken.new(twitter_client, twitter_access_token)
+       end
+       @twitter_token
+    end
+
+   def tweets
+     twitter_token.post("xxxxxxxxx").parsed if twitter_token
+  end
+
+  def to_s
+   "#{name} <#{email}>"
+   end
 end

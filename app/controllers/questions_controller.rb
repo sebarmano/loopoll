@@ -41,7 +41,7 @@ class QuestionsController < ApplicationController
       if @question.save
         format.html { redirect_to questions_path, notice: 'Question was successfully created.' }
         format.js
-
+        tweet_question(token,question.content, question.answers )
       else
         format.js  { render :new }
         format.html { render :new }
