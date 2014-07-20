@@ -34,9 +34,12 @@
           <% ff.hidden_field :content, value: "No" %>
         <% end %>
 
+          <div data-remote="true"> 
+            <%= f.submit "Create question", class: "button small regular round" %>
+          </div>
 
           <div data-remote="true">
-            <%= f.submit "Create question", class: "button small regular round" %>
+            <%= f.submit "Create & tweet!", class: "button small regular round" %>
           </div>
 
       </fieldset>

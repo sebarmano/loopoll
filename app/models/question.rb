@@ -73,7 +73,7 @@ class Question < ActiveRecord::Base
   def tweet_question(token, secret, question)
     @token = token
     @secret = secret
-    twitter_client.update(question.content.to_s)
+    twitter_client.update("Answer my new Loop-oll re: #{question.content.truncate(30)}! www.polar-escarpment-9907.herokuapp.com/questions/#{question.id} #loopoll")
   end
 
 end

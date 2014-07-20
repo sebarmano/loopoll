@@ -40,7 +40,8 @@ class QuestionsController < ApplicationController
     respond_to do |format|
       if @question.save #TODO add if logged in w twitter. add option to tweet or not.
        # binding.pry
-        @question.tweet_question(session[:token], session[:secret], @question)
+        
+        @question.tweet_question(session[:token], session[:secret], @question) if params[:commit] == "Create & tweet!" 
         format.html { redirect_to questions_path, notice: 'Question was successfully created.' }
         format.js
       else

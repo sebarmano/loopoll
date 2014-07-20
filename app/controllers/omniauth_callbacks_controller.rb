@@ -5,7 +5,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       flash.notice = "Signed in with twitter!"
       session[:token] = request.env["omniauth.auth"]["credentials"]["token"]
       session[:secret] = request.env["omniauth.auth"]["credentials"]["secret"]
-      binding.pry 
       sign_in_and_redirect user
     else
       session["devise.user_attributes"] = user.attributes
