@@ -39,9 +39,10 @@ class QuestionsController < ApplicationController
     @question.user_id = current_user.id
     respond_to do |format|
       if @question.save
+       # binding.pry
+        @question.tweet_question(session[:token], session[:secret], @question)
         format.html { redirect_to questions_path, notice: 'Question was successfully created.' }
         format.js
-        tweet_question(token,question.content, question.answers )
       else
         format.js  { render :new }
         format.html { render :new }
