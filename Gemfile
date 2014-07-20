@@ -78,3 +78,5 @@ gem 'oauth2'
 # gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'httparty'
+
+gem 'twitter'

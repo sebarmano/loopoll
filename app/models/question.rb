@@ -61,34 +61,19 @@ class Question < ActiveRecord::Base
     most_answered[0]
   end
 
-  # def results_data
-  #   results.includes(:answer).group(:answer).count.max {|m| m.answer_id}).answer_id
-  # end
-
-  #includes(:posts).where('posts.name = ?', 'example').references(:posts)
-
-  # def results_max
-  #   result_data.max {|m| m.answer}).answer
-  # end
-
+  def twitter_client
+    client = Twitter::REST::Client.new do |config|
+      config.consumer_key        = ENV['TWITTER_KEY']
+      config.consumer_secret     = ENV['TWITTER_SECRET']
+      config.access_token        = @token
+      config.access_token_secret = @secret
+    end
+  end
 
   def tweet_question(token, secret, question)
-    twitter_access_token = twitter_token(token, secret)
-    status = (question.content).truncate(137)
-    twitter_access_token.post("/1.1/statuses/update.json", :params => { 'status' => status })
-
-    #set the tweet status to the question content and answers, add a loopoll hash
+    @token = token
+    @secret = secret
+    twitter_client.update(question.content.to_s)
   end
 
-  def twitter_token(twitter_access_token, twitter_access_secret)
-    return @twitter_token if @twitter_token
-    twitter_client = OAuth2::Client.new(Rails.application.secrets.twitter_key,
-                                        Rails.application.secrets.twitter_secret,
-           @twitter_token = OAuth2::AccessToken.new(twitter_client, twitter_access_token, twitter_access_secret)
-
-  end
-
-  def to_s
-   "#{name} <#{email}>"
-   end
 end

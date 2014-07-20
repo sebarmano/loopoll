@@ -14,12 +14,15 @@ Users must have an account to vote,
   can only vote on questions (created by other users - not on their own!) until the due date,
   and each user can only vote once(!) on any question - there are no loopholes with Loop-oll!
 
-###Login
+## Setup
 
-Sign up (or log in if you already have an account) via http://0:0:0:0!
-
-- If you'd like to test Loop-oll before creating an account, log in with email: test@test and pwd: test.
-- Once logged in, your name will display in the top nav, next to the logout button.
+```sh
+git clone https://github.com/tiy-durham-q3-rails/loopoll.git
+cd loopoll
+rake db:migrate
+rails server
+```
+Do not attempt to log in via GitHub unless `TWITTER_KEY` and `TWITTER_SECRET` are set in your environment.
 
 ###Features
 
