@@ -26,7 +26,7 @@
   <table>
     <thead>
     <tr>
-      <th colspan="3">answered question</th>
+      <th>answered question</th>
     </tr>
     </thead>
 
@@ -42,11 +42,11 @@
 <div class="columns-5 large right">
   <table>
     <thead>
-    <tr>
-      <th>Questions to answer</th>
-      <th>Question creator</th>
-      <th>Days left to answer</th>
-    </tr>
+      <tr>
+        <th>Questions to answer</th>
+        <th>Question creator</th>
+        <th>Days left to answer</th>
+      </tr>
     </thead>
 
     <tbody>
@@ -57,6 +57,7 @@
               <td><%= question.user.name %></td>
               <td><%= pluralize(question.days_left, "day") %></td>
           <% end %>
+        </tr>
     <% end %>
     </tbody>
   </table>
