@@ -14,7 +14,7 @@ class QuestionsController < ApplicationController
   # GET /questions/1.json
   def show
     @result = Result.new
-    @results = @question.results
+    @results = @question.results  
     @answers = @question.answers
   end
 
@@ -39,7 +39,7 @@ class QuestionsController < ApplicationController
     @question.user_id = current_user.id
     respond_to do |format|
       if @question.save #TODO add if logged in w twitter. add option to tweet or not.
-       # binding.pry
+    
         
         @question.tweet_question(session[:token], session[:secret], @question) if params[:commit] == "Create & tweet!" 
         format.html { redirect_to questions_path, notice: 'Question was successfully created.' }

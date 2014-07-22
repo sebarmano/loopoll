@@ -1,4 +1,4 @@
-require 'test_helper'
+require 'rails_helper'
 
 class QuestionTest < ActiveSupport::TestCase
 
@@ -20,11 +20,6 @@ class QuestionTest < ActiveSupport::TestCase
       refute q2.valid?
       assert q2.errors[:duedate].any?
     end
-
-
-#didn't add tests for valid & invalid b/c these would only test code works?
-#or, do we need those two also?
-
 
   test "owner is user" do
       user = User.create(

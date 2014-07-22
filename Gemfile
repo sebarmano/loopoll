@@ -50,7 +50,7 @@ gem 'stack_rescue', group: :development
 gem 'foundation-rails'
 gem 'simple_form'
 gem 'faker'
-gem 'pry-rails'
+gem 'pry-byebug'
 gem 'better_errors'
 gem 'binding_of_caller'
 gem 'quiet_assets', '~> 1.0.3'
@@ -80,3 +80,17 @@ gem 'omniauth-twitter'
 gem 'httparty'
 
 gem 'twitter'
+
+group :development, :test do
+ gem 'rspec-rails', '~> 3.0.1'
+ gem 'guard-rspec', require: false
+ gem 'terminal-notifier-guard'
+ gem 'factory_girl_rails'
+end
+
+group :test do
+  gem 'shoulda-matchers', require: false
+end
+
+
+
