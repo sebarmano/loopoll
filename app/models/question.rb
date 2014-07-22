@@ -14,18 +14,19 @@ class Question < ActiveRecord::Base
 
   # Validations
   def future_due_date #TODO: test for this validation
-    if duedate < Date.today
+    return false if duedate == nil
+    if duedate <= Date.today
       errors.add(:duedate, ", poll must end in the future.")
     end
   end
 
   # Methods
-  def active
-    duedate > Date.today
+  def active?
+    duedate >= Date.today
   end
 
   def inactive?
-    !active
+    !active?
   end
 
   def owner(user)
@@ -61,6 +62,14 @@ class Question < ActiveRecord::Base
     most_answered[0]
   end
 
+  def tweet_question(token, secret, question)
+    @token = token
+    @secret = secret
+    twitter_client.update("Answer my new Loop-oll re: #{question.content.truncate(30)}! www.polar-escarpment-9907.herokuapp.com/questions/#{question.id} #loopoll")
+  end
+
+  private
+
   def twitter_client
     client = Twitter::REST::Client.new do |config|
       config.consumer_key        = ENV['TWITTER_KEY']
@@ -68,12 +77,6 @@ class Question < ActiveRecord::Base
       config.access_token        = @token
       config.access_token_secret = @secret
     end
-  end
-
-  def tweet_question(token, secret, question)
-    @token = token
-    @secret = secret
-    twitter_client.update("Answer my new Loop-oll re: #{question.content.truncate(30)}! www.polar-escarpment-9907.herokuapp.com/questions/#{question.id} #loopoll")
   end
 
 end
