@@ -60,6 +60,7 @@
               <tr>
                 <td><%= link_to result.answer.question.content, result.answer.question %></td>
                 <td><%= result.answer.content %></td>
+              </tr>
             <% end %>
           </tbody>
         </table>
@@ -78,12 +79,13 @@
 
           <tbody>
             <% @questions.each do |question| %>
-              <tr>
-                <% unless question.user == current_user || question.answered?(current_user) || question.duedate < Date.today %>
+              <% unless question.user == current_user || question.answered?(current_user) || question.duedate < Date.today %>
+                <tr>
                   <td><%= link_to question.content, question %></td>
                   <td><%= question.user.name %></td>
                   <td><%= pluralize(question.days_left, "day") %></td>
-                <% end %>
+                </tr>
+              <% end %>
             <% end %>
           </tbody>
         </table>
