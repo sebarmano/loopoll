@@ -1,5 +1,10 @@
+source 'https://rails-assets.org' do
+  gem 'rails-assets-pikaday'
+  gem 'rails-assets-iCheck'
+  gem 'rails-assets-intro.js'
+end
+
 source 'https://rubygems.org'
-source 'https://rails-assets.org'
 ruby "2.2.3"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -41,9 +46,10 @@ gem 'unicorn'
 # gem 'debugger', group: [:development, :test]
 
 gem 'sqlite3', :group => [:development, :test]
+
 group :production do
-#gem 'thin'
   gem 'pg'
+  gem 'rails_12factor'
 end
 
 gem 'stack_rescue', group: :development
@@ -59,19 +65,10 @@ gem 'font-awesome-rails'
 gem "chartkick"
 
 # heroku deployment
-gem 'rails_12factor', group: :production
 
 gem 'kramdown'
 gem 'jquery-datatables-rails'
 
-# datepicker
-gem 'rails-assets-pikaday'
-
-# Change aspect of checkboxes and radio buttons
-gem 'rails-assets-iCheck'
-
-# Walktrhough for new users
-gem 'rails-assets-intro.js'
 
 gem 'devise'
 gem 'oauth2'
