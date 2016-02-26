@@ -1,5 +1,14 @@
-$(document).ready( function() {
-  $('#created-quest').dataTable();
-  $('#answered-questions').dataTable();
-  $('#questions-to-answer').dataTable();
+$('#created-quest').DataTable({
+  lengthChange: false,
+  searching: false
+});
+
+$('#answered-questions').DataTable({
+  lengthChange: false,
+  searching: false
+});
+
+$('#questions-to-answer').DataTable({
+  lengthChange: false,
+  searching: false
 });
