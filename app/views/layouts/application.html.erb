@@ -42,10 +42,13 @@
         </ul>
     </section>
   </nav>
-    <div class="wall">
+    <div class="spacer">
       <div class="row">
-          <p class="notice"><%= notice if notice %></p>
-          <p class="alert"><%= alert if alert %></p>
+        <% if flash.any? %>
+          <div class="alert-box">
+            <%= notice || alert%>
+          </div>
+        <% end %>
       </div>
 
 

@@ -1,5 +1,4 @@
 <div class="row">
-<p id="notice"><%= notice %></p>
   <div class="large-10 columns large-centered">
     <h2 class="fancy"><%= @question.content %></h2>
   </div>
@@ -19,7 +18,7 @@
     <%= card(@question.results.count, 'ANSWERS RECEIVED', 'right') %>
     <%= card(@question.days_left >0 ? @question.days_left : 0, 'DAYS TO END', 'right') %>
     <%  if @question.results.any? %>
-    <%= card( @question.most_answered.content, 'MOST ANSWERED', 'right') %>
+      <%= card( @question.most_answered.content, 'MOST ANSWERED', 'right') %>
     <% end %>
 
   </div>
@@ -33,9 +32,9 @@
             <h2><%= pluralize(@result.errors.count, "error") %> prohibited this result from being saved:</h2>
 
             <ul>
-            <% @result.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
-            <% end %>
+              <% @result.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
             </ul>
           </div>
         <% end %>
@@ -48,16 +47,15 @@
           <%= f.submit "Vote!", class:"button success" %>
         </div>
       <% end %>
-      </div>
+    </div>
   </div>
 <% end %>
 
 <p>
-  <div class="row">
-    <ul class="button-group large-6 columns large-centered">
-      <li><%= link_to 'All questions', questions_path, class: "button secondary" %></li>
-
-      <li ><%= link_to 'Next question to answer', questions_path, class: "button success"%></li> <!--TODO: choose the next question -->
-    </ul></div>
-  </div>
+<div class="row">
+  <ul class="button-group large-6 columns large-centered">
+    <li><%= link_to 'All questions', questions_path, class: "button secondary" %></li>
+  </ul>
+</div>
+</div>
 </p>

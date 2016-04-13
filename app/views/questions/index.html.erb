@@ -1,25 +1,33 @@
 <div class="container">
-  <p id="notice"><%= notice %></p>
   <div class="row">
-    <div class="button success round" id="button-show" data-step="5" data-intro="Want to create a question? Glad you asked! Click on this button to open the Question creator!">Create a question!</div>
+    <div class="button success round" id="button-show" data-step="5"
+                                                       data-intro="Want to create a question? Glad you asked! Click on this
+                                                       button to open the Question creator!">
+      Create a question!
+    </div>
     <i class="fa fa-question-circle right help" id="index-help"></i>
 
     <fieldset class="hidden" id="qcreator">
-          <div class="large-9 columns">
-            <%= render 'form_quickq' %>
-          </div>
+      <div class="large-9 columns">
+        <%= render 'form_quickq' %>
+      </div>
 
-          <div class="large-3 columns">
-            <%= render 'form_multiq' %>
-          </div>
-      </fieldset>
+      <div class="large-3 columns">
+        <%= render 'form_multiq' %>
+      </div>
+    </fieldset>
   </div>
 
-  <div class="row">
-    <fieldset>
-    <h3 class="special" data-step="1" data-intro="Here is your dashboard. You can acess every question from here">Dashboard</h3><br>
-    <div class="large-6 columns">
-        <table id="created-quest" data-step="2" data-intro="These are questions you created. You can't answer you own questions but you can see results for them.">
+  <fieldset>
+    <div class="row">
+      <h3 class="special" data-step="1" data-intro="Here is your dashboard. You
+      can acess every question from here">
+        Dashboard
+      </h3><br>
+      <div class="large-6 columns">
+        <table id="created-quest" data-step="2" data-intro="These are questions
+        you created. You can't answer you own questions but you can see
+        results for them.">
           <thead>
             <tr>
               <th>Created question</th>
@@ -34,11 +42,11 @@
                 <td><%= link_to question.content, question %></td>
                 <td><%= question.results.count %></td>
                 <td><%= link_to question,
-                            method: :delete,
-                            data: { confirm: 'Are you sure you want to delete this question and its answers?' },
-                            remote:true do %>
-                     <i class='fa fa-times-circle'></i>
-                     <% end %></td>
+                  method: :delete,
+                  data: { confirm: 'Are you sure you want to delete this question and its answers?' },
+                  remote:true do %>
+                  <i class='fa fa-times-circle'></i>
+                <% end %></td>
               </tr>
             <% end %>
           </tbody>
@@ -65,9 +73,10 @@
           </tbody>
         </table>
       </div>
-</div>
-<div class="row">
-      <div class="columns-8 large">
+    </div>
+    <div class="spacer"></div>
+    <div class="row">
+      <div class="large-12 columns">
         <table id="questions-to-answer" data-step="4" data-intro="These are questions you can answer! These questions have been created by your friends.">
           <thead>
             <tr>
@@ -90,7 +99,6 @@
           </tbody>
         </table>
       </div>
-
-      </fieldset>
-  </div>
+    </div>
+  </fieldset>
 </div>

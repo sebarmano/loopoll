@@ -69,11 +69,10 @@ li.active.fancy a {
   color:black;
 }
 
-/*
-.wall {
-  background: url("white_wall_hash.png") repeat;
-  height: 1100px;
- }*/
+.spacer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+ }
 
 .button a {
   color: white;
@@ -82,4 +81,10 @@ li.active.fancy a {
 i {
   font-size: 20px;
   color: red;
+}
+
+.alert-box {
+  padding: 10px;
+  margin: 0;
+  text-align: center;
 }

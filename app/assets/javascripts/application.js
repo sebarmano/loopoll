@@ -48,4 +48,5 @@ $("#index-help").click( function(){
 
 $("#qcreator-help").click( function(){
   introJs(".qcreator").start();
+  console.log("button clicked");
 })
